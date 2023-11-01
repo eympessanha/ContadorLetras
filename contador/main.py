@@ -26,9 +26,14 @@ x = 0
 y = 0
 z = 0
 
+palavras = []
+
 print("Contagem de letras!")
 print("Para encerrar a adição de palavras, basta inserir X")
 palavra = str(input("Insira a palavra: ")).upper()
+if palavra != "X":
+    palavras.append(palavra)
+
 while palavra != "X":
     for letra in palavra:
         if letra == "A":
@@ -83,6 +88,11 @@ while palavra != "X":
             z += 1
     # funcoes.verificarLetras(palavra,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
     palavra = str(input("Insira a palavra: ")).upper()
+    if palavra != "X":
+        palavras.append(palavra)
+
+print(palavras)
+
 funcoes.exibirLetras(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z)
 
 
